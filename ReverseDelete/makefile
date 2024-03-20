@@ -18,3 +18,10 @@ run: compile
         ./reverseDelete.bin -f $$file -o $$output_file; \
 		echo "$$file calculado, salvo em $$output_file"; \
     done
+
+run_s: compile
+	for file in $(MTX_FILES); do \
+        output_file=$(OUTPUT_DIR)/$$(basename $$file); \
+        ./reverseDelete.bin -f $$file -o $$output_file -s; \
+		echo "$$file calculado, salvo em $$output_file"; \
+    done

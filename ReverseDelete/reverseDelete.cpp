@@ -111,7 +111,12 @@ int main (int argc, char *argv[]) {
                     << "\tEste programa tem como objetivo calcular o custo de uma AGM\n"
                     << "\t(arvore geradora minima) a partir de um grafo conexo nao direcionado\n"
                     << "\tpor meio do algoritmo ReverseDelete.\n"
-                    << "\tAssim como apresentar as arestas que compoem a AGM ao utilizar o -s\n\n";
+                    << "\tAssim como apresentar as arestas que compoem a AGM ao utilizar o -s\n"
+                    << "\n"
+                    << "\tAo executar: \'make run\', o programa sera executado utilizando os casos\n"
+                    << "\ttestes de \'entradas_alg5\' escrevendo os custos minimos de cada AGM em \'saidas_alg5\'.\n"
+                    << "\tAo executar: \'make run_s\', o programa sera executado igualmente ao \'make run\', porem,\n"
+                    << "\ta saida tera as arestas que formam cada AGM.\n\n";
 
             return 0;
         } else if (equal(argv[i], "-o") && i < argc - 1) {
