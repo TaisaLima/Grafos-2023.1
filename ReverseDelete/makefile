@@ -13,15 +13,17 @@ clean:
 
 # Comando para executar o programa para cada arquivo .mtx
 run: compile
+	mkdir -p $(OUTPUT_DIR)
 	for file in $(MTX_FILES); do \
-        output_file=$(OUTPUT_DIR)/$$(basename $$file); \
-        ./reverseDelete.bin -f $$file -o $$output_file; \
+        	output_file=$(OUTPUT_DIR)/$$(basename $$file); \
+        	./reverseDelete.bin -f $$file -o $$output_file; \
 		echo "$$file calculado, salvo em $$output_file"; \
     done
 
 run_s: compile
+	mkdir -p $(OUTPUT_DIR)
 	for file in $(MTX_FILES); do \
-        output_file=$(OUTPUT_DIR)/$$(basename $$file); \
-        ./reverseDelete.bin -f $$file -o $$output_file -s; \
+        	output_file=$(OUTPUT_DIR)/$$(basename $$file); \
+        	./reverseDelete.bin -f $$file -o $$output_file -s; \
 		echo "$$file calculado, salvo em $$output_file"; \
     done
